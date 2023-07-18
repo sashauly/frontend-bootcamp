@@ -4,17 +4,17 @@
 
 - [Lesson 1](#lesson-1)
   - [Table of Contents](#table-of-contents)
-  - [Task 1. counter()](#task-1-counter)
-  - [Task 2. calculator()](#task-2-calculator)
-  - [Task 3. paskalsTriangle()](#task-3-paskalstriangle)
-  - [Task 4. fibonachi()](#task-4-fibonachi)
-  - [Task 5. removeReps()](#task-5-removereps)
-  - [Task 6. removeSymbol()](#task-6-removesymbol)
-  - [Task 7. atm()](#task-7-atm)
-  - [Task 8. wordSearch()](#task-8-wordsearch)
-  - [Task 9. sudoku()](#task-9-sudoku)
+  - [Exercise 1. counter()](#exercise-1-counter)
+  - [Exercise 2. calculator()](#exercise-2-calculator)
+  - [Exercise 3. paskalsTriangle()](#exercise-3-paskalstriangle)
+  - [Exercise 4. fibonachi()](#exercise-4-fibonachi)
+  - [Exercise 5. removeReps()](#exercise-5-removereps)
+  - [Exercise 6. removeSymbol()](#exercise-6-removesymbol)
+  - [Exercise 7. atm()](#exercise-7-atm)
+  - [Exercise 8. wordSearch()](#exercise-8-wordsearch)
+  - [Exercise 9. sudoku()](#exercise-9-sudoku)
 
-## Task 1. counter()
+## Exercise 1. counter()
 
 Using:
 
@@ -37,7 +37,7 @@ counter(); // The function will return 9
 
 [Stubs for functions](./src/counter.js).
 
-## Task 2. calculator()
+## Exercise 2. calculator()
 
 Using:
 
@@ -57,7 +57,7 @@ You also need to write 4 functions of basic arithmetic operators that take the f
 
 [Stubs for functions](./src/calculator.js).
 
-## Task 3. paskalsTriangle()
+## Exercise 3. paskalsTriangle()
 
 Using:
 
@@ -76,7 +76,7 @@ Perhaps recursion will help here.
 
 You can find the blanks for functions by [link](./src/paskalsTriangle.js).
 
-## Task 4. fibonachi()
+## Exercise 4. fibonachi()
 
 Write a function that accepts the number from a series of Fibonacci and returns its value \
 Suppose that a series of Fibonacci starts with 0 index \
@@ -91,7 +91,7 @@ Suppose that a number of Fibonacci is represented as 0,1,1,2,3,5,8,13 ......
 
 You can find the blanks for functions by [link](./src/fibonachi.js).
 
-## Task 5. removeReps()
+## Exercise 5. removeReps()
 
 Using:
 
@@ -117,7 +117,7 @@ removeReps([1, 1, 2, 4, 5, 6, 6, 8, 9, 11]); // Conclusion [1,2,4,5,6,8,9,11]
 
 You can find the blanks for functions by [link](./src/removeReps.js).
 
-## Task 6. removeSymbol()
+## Exercise 6. removeSymbol()
 
 Using:
 
@@ -134,7 +134,7 @@ Be sure to use the methods and cycles that you have studied.
 
 You can find the blanks for functions by [link](./src/removeSymbol.js)
 
-## Task 7. atm()
+## Exercise 7. atm()
 
 Write a function that describes the basic behavior of an ATM that accepts the number to the input and returns the object in format {nominal_kurura: quantity_Muur}.\
 Working conditions of the function:
@@ -163,7 +163,7 @@ atm(100050); // limit exceeded
 
 You can find the blanks for functions by [link](./src/atm.js)
 
-## Task 8. wordSearch()
+## Exercise 8. wordSearch()
 
 In this task, it will be necessary to write an algorithm for the search, which will say whether it is possible to find the input word in the puzzle of the search for words, which is also fed to the input.
 This task has two levels of complexity:
@@ -176,7 +176,7 @@ This task has two levels of complexity:
 
 An example of a puzzle and the output result can be found by [link](./src/wordSearch.js)
 
-## Task 9. sudoku()
+## Exercise 9. sudoku()
 
 You need to write a function to solve Sudoku.The function accepts one argument - a line in which there are at the site of the missed numbers -.
 The function should return the line in which all values will be filled.
@@ -205,10 +205,11 @@ Be sure to implement the `Prettyboard` method, which takes a board written in a 
 6 - - 3 - 8 9 - -
 ```
 
-| Introduction                                                                                |                                                                              Conclusion                                                                               |
-| ------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| sudoku("53--7----6--195----98----6-8---6---34--8-3--17---2---6-6----28----419--5----8--79") | <img width="136" alt="Screenshot 2022-04-18 at 20 36 18" src="https://user-images.githubusercontent.com/46561905/163840787-2a2248b5-2cb4-43e3-9837-cc9a4564db9b.png"> |
-[In the task file] (./ SRC/Sudoku.js) test data for your function is presented, they have 3rd levels:
+| Introduction                                                                                |                                                                 Conclusion                                                                  |
+| ------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------: |
+| sudoku("53--7----6--195----98----6-8---6---34--8-3--17---2---6-6----28----419--5----8--79") | ![Screenshot 2022-04-18 at 20 36 18](https://user-images.githubusercontent.com/46561905/163840787-2a2248b5-2cb4-43e3-9837-cc9a4564db9b.png) |
+
+[In the task file](./src/Sudoku.js) test data for your function is presented, they have 3rd levels:
 
 `-` five puzzles can be resolved using basic logic
 

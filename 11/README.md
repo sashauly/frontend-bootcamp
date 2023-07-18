@@ -1,11 +1,16 @@
-#  Lesson 11.
+# Lesson 11
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Асинхронность в redux](#асинхронность-в-redux) \
-   1.2. [Redux thunk](#redux-thunk) \
-   1.3. [Redux saga](#redux-saga)
-2. [Chapter II](#chapter-ii) \
-   2.1. [Работа с формами](#работа-с-формами)
+## Table of Contents
+
+- [Lesson 11](#lesson-11)
+  - [Table of Contents](#table-of-contents)
+  - [Chapter I](#chapter-i)
+    - [Асинхронность в redux](#асинхронность-в-redux)
+    - [Redux thunk](#redux-thunk)
+    - [Redux saga](#redux-saga)
+  - [Chapter II](#chapter-ii)
+    - [Работа с формами](#работа-с-формами)
+  - [Exercise 1](#exercise-1)
 
 ## Chapter I
 
@@ -39,10 +44,6 @@ Redux-saga делает это с помощью [ES6 генераторов](ht
 
 Работа с формами в React печально известна своей сложностью, особенно когда речь идет о динамических полях. Существует ряд библиотек, которые облегчают весь процесс. Одной из таких библиотек является [React Hook Form](./materials/React_hook_form.md). Вместо того чтобы иметь кучу компонентов формы, React Hook Form, как следует из названия, предоставляет различные хуки, которые помогают управлять поведением формы.
 
+## Exercise 1
 
-
-**Упражнение 1.** \
-Сегодня вам предстоит создать свой маркетплей. [Заказчик предоставил ТЗ](./src/chapter_2/Exercise_1.md)
-
-
->Пожалуйста, оставьте обратную связь по проекту в [форме обратной связи.](https://forms.gle/CCHjSBoqTCG8bLPf9)
+Сегодня вам предстоит создать свой маркетплейc. [Заказчик предоставил ТЗ](./src/chapter_2/Exercise_1.md)
