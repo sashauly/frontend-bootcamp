@@ -12,7 +12,4 @@ function makeCounter() {
 
 const counter = makeCounter();
 
-console.log(counter()); // Функция вернет 0
-console.log(counter()); // Функция вернет 3
-console.log(counter()); // Функция вернет 6
-console.log(counter()); // Функция вернет 9
+module.exports = counter;

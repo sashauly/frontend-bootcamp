@@ -13,5 +13,4 @@ function paskalsTriangle(x, y) {
 
   return paskalsTriangle(x - 1, y - 1) + paskalsTriangle(x, y - 1);
 }
-
-console.log(paskalsTriangle(4, 4));
+module.exports = paskalsTriangle;

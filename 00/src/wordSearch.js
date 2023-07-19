@@ -60,22 +60,4 @@ function searchSubString(puzzle, word) {
   return false;
 }
 
-const examplePuzzle = [
-  ['b', 'l', 'g', 'o', 'l', 'd', 's'],
-  ['x', 'k', 'q', 'w', 'i', 'j', 'p'],
-  ['a', 'n', 'w', 'k', 'k', 'p', 'n'],
-  ['h', 'e', 'e', 'e', 'k', 'i', 'l'],
-  ['q', 'e', 'k', 'a', 'y', 'q', 'a'],
-  ['h', 'u', 'h', 'a', 'e', 'a', 'u'],
-  ['k', 'q', 'j', 'c', 'c', 'm', 'r'],
-];
-
-// Level 1
-console.log(searchSubString(examplePuzzle, 'like')); // true
-console.log(searchSubString(examplePuzzle, 'gold')); // true
-console.log(searchSubString(examplePuzzle, 'queen')); // true
-console.log(searchSubString(examplePuzzle, 'dog')); // false
-
-// Level 2
-console.log(searchSubString(examplePuzzle, 'cake')); // true
-console.log(searchSubString(examplePuzzle, 'mama')); // false
+module.exports = searchSubString;

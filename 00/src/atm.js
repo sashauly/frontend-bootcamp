@@ -39,6 +39,4 @@ function atm(sum) {
   return dispensedNotes;
 }
 
-console.log(atm(8350)); // {5000 : 1, 2000 : 1, 1000 : 1, 200 : 1, 100 : 1, 50 : 1 }
-console.log(atm(2570)); // Incorrect value
-console.log(atm(100050)); // limit exceeded
+module.exports = atm;

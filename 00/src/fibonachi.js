@@ -9,9 +9,9 @@ function fibo(index) {
   return fibo(index - 1) + fibo(index - 2);
 }
 
-const count = 10;
-const fibArray = [];
-for (let i = 0; i < count; i += 1) {
-  fibArray.push(fibo(i));
-}
-console.log(fibArray);
+// const count = 10;
+// const fibArray = [];
+// for (let i = 0; i < count; i += 1) {
+//   fibArray.push(fibo(i));
+// }
+module.exports = fibo;

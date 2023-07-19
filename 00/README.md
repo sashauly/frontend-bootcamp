@@ -128,9 +128,9 @@ Be sure to use the methods and cycles that you have studied.
 
 | Introduction                                        |        Conclusion         |
 | --------------------------------------------------- | :-----------------------: |
-| removeString("Большое и интересное сообщение", "о") | Бльше и интересне сбщение |
-| removeString("Hello world!", "z")                   |       Hello world!        |
-| removeString("А роза азора", "А")                   |        роза азора         |
+| removeSymbol("Большое и интересное сообщение", "о") | Бльше и интересне сбщение |
+| removeSymbol("Hello world!", "z")                   |       Hello world!        |
+| removeSymbol("А роза азора", "А")                   |        роза азора         |
 
 You can find the blanks for functions by [link](./src/removeSymbol.js)
 

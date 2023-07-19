@@ -69,22 +69,29 @@ function plus(a) {
 }
 
 function minus(a) {
-  return (b) => a - b;
+  return (b) => b - a;
 }
 
 function divide(a) {
-  return (b) => a / b;
+  return (b) => b / a;
 }
 
 function mult(a) {
   return (b) => a * b;
 }
 
-console.log(one(mult(three(plus(four()))))); // В итоге вернется 7
-console.log(
-  two(
-    minus(
-      three(mult(nine(divide(seven(plus(eight(mult(six(plus(five())))))))))),
-    ),
-  ),
-);
+module.exports = {
+  one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
+  plus,
+  minus,
+  mult,
+  divide,
+};
