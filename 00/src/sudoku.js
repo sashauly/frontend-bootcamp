@@ -123,6 +123,7 @@ function sudoku(string) {
     return false;
   };
   solve();
+  prettyBoard(board);
   return board.flat().join('');
 }
 

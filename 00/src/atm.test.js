@@ -11,6 +11,10 @@ test('normal test', () => {
   });
 });
 
+test('sum <= 0', () => {
+  expect(atm(0)).toBe('Incorrect value');
+});
+
 test('atm cannot give out this amount', () => {
   expect(atm(2570)).toBe('Incorrect value');
 });
