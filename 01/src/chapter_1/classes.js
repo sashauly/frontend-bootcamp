@@ -6,7 +6,6 @@
 -hardSkills string[]
 -company string
 
-
 Так же должны иметься три метода:
 
 -changeCompany(newCompanyName) - сотрудник может сменить компанию, либо же просто уволиться
@@ -14,7 +13,32 @@
 -addSkill(newSkillName) - сотрудник может дополнить список своих скиллов.
 */
 
+module.exports = class Employee {
+  constructor(_name, _grade, _hardSkills, _company) {
+    this.name = _name;
+    this.grade = _grade;
+    this.hardSkills = _hardSkills;
+    this.company = _company;
+  }
 
-export class Empleyee {
+  /**
+   * @param {string} newCompanyName
+   */
+  set changeCompany(newCompanyName) {
+    this.company = newCompanyName;
+  }
 
-}
+  /**
+   * @param {string} newGradeName
+   */
+  set upGrade(newGradeName) {
+    this.grade = newGradeName;
+  }
+
+  /**
+   * @param {string} newSkillName
+   */
+  set addSkill(newSkillName) {
+    this.hardSkills.push(newSkillName);
+  }
+};
