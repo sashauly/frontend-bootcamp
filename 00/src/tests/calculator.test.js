@@ -12,7 +12,7 @@ const {
   minus,
   mult,
   divide,
-} = require('./calculator');
+} = require('../calculator');
 
 test('', () => {
   expect(one()).toBe(1);

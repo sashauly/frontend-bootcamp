@@ -1,4 +1,4 @@
-const removeSymbol = require('./removeSymbol');
+const removeSymbol = require('../removeSymbol');
 
 test('should first', () => {
   const string = 'Большое и интересное сообщение';

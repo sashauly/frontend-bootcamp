@@ -1,4 +1,4 @@
-const atm = require('./atm');
+const atm = require('../atm');
 
 test('normal test', () => {
   expect(atm(8350)).toStrictEqual({

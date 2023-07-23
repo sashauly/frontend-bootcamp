@@ -1,4 +1,4 @@
-const fibo = require('./fibonachi');
+const fibo = require('../fibonachi');
 
 test('should first', () => {
   expect(fibo(0)).toBe(0);

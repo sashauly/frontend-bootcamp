@@ -1,4 +1,4 @@
-const counter = require('./counter');
+const counter = require('../counter');
 
 test('should first', () => {
   expect(counter()).toBe(0);

@@ -1,4 +1,4 @@
-const removeReps = require('./removeReps');
+const removeReps = require('../removeReps');
 
 test('should first', () => {
   const data = [1, 1, 2, 4, 5, 6, 6, 8, 9, 11];

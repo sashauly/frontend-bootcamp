@@ -1,4 +1,4 @@
-const searchSubString = require('./wordSearch');
+const searchSubString = require('../wordSearch');
 
 const examplePuzzle = [
   ['b', 'l', 'g', 'o', 'l', 'd', 's'],

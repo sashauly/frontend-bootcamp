@@ -1,4 +1,4 @@
-const paskalsTriangle = require('./paskalsTriangle');
+const paskalsTriangle = require('../paskalsTriangle');
 
 test('should first', () => {
   expect(paskalsTriangle(2, 3)).toBe(3);
