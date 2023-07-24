@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'jest/globals': true,
   },
   extends: 'airbnb-base',
   plugins: ['prettier', 'jest'],
@@ -9,7 +10,6 @@ module.exports = {
     {
       env: {
         node: true,
-        'jest/globals': true,
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {

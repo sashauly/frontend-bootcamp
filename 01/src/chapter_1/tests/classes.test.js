@@ -1,4 +1,4 @@
-const Employee = require('../classes');
+const Employee = require('../employee');
 
 const worker = new Employee('Joe', 'L1', ['Not talking', 'Writing'], 'Google');
 
