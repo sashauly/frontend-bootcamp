@@ -15,6 +15,8 @@ expandStack(newTech) - в кач-ве аргумента принимает ст
 */
 
 module.exports = class BackendDeveloper extends Employee {
+  developerSide = 'backend';
+
   constructor(
     _name,
     _grade,
@@ -25,10 +27,11 @@ module.exports = class BackendDeveloper extends Employee {
     _projectQuantity,
   ) {
     super(_name, _grade, _hardSkills, _company);
-    this.projectQuantity = _stack;
-    this.developerSide = _developerSide;
-    this.projectQuntity = _projectQuantity;
+    this.stack = _stack;
+    this.projectQuantity = _projectQuantity;
   }
 
-  expandStack(newTech) {}
+  expandStack(newTech) {
+    this.stack.push(newTech);
+  }
 };

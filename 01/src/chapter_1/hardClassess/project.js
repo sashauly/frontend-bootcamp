@@ -37,6 +37,10 @@ addNewProjectMember(Developer/Manager) - Метод внутри которог�
 подходит ли сотрудник проекту. Если подходит, то команда расширяется, иначе нет.
 */
 
+const BackendDeveloper = require('./backendDev');
+const FrontendDeveloper = require('./frontendDev');
+const Manager = require('./manager');
+
 module.exports = class Project {
   constructor(_projectName, _minQualification, _team) {
     this.projectName = _projectName;
@@ -44,7 +48,19 @@ module.exports = class Project {
     this.team = _team;
   }
 
-  completeProject() {}
+  // completeProject() {}
 
-  addNewProjectMember(Employee) {}
+  addNewProjectMember(Member) {
+    if (Member instanceof FrontendDeveloper) {
+      this.team.developers.frontend.push(Member);
+    } else if (Member instanceof BackendDeveloper) {
+      this.team.developers.backend.push(Member);
+    } else if (Member instanceof Manager) {
+      this.team.manager = Member;
+    } else {
+      throw new Error(
+        'Instance of an Object must be frontend, backend or manager!',
+      );
+    }
+  }
 };

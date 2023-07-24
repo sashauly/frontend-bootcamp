@@ -1,3 +1,7 @@
+const BackendDeveloper = require('./backendDev');
+const FrontendDeveloper = require('./frontendDev');
+const Manager = require('./manager');
+
 /*
 
 - Company - класс описывающий IT компанию. Состоит из:
@@ -41,7 +45,30 @@ module.exports = class Company {
     this.completedProjects = _completedProjects;
     this.staff = _staff;
   }
-  addNewCompanyMember(Employee) {}
-  addProject(Project) {}
-  getMembersQuantity() {}
+
+  addNewCompanyMember(Member) {
+    if (Member instanceof FrontendDeveloper) {
+      this.staff.developers.frontend.push(Member);
+    } else if (Member instanceof BackendDeveloper) {
+      this.staff.developers.backend.push(Member);
+    } else if (Member instanceof Manager) {
+      this.staff.managers.push(Member);
+    } else {
+      throw new Error(
+        'Instance of an Object must be frontend, backend or manager!',
+      );
+    }
+  }
+
+  addProject(Project) {
+    this.currentProjects.push(Project);
+  }
+
+  getMembersQuantity() {
+    return (
+      this.staff.managers.length +
+      this.staff.developers.frontend.length +
+      this.staff.developers.backend.length
+    );
+  }
 };

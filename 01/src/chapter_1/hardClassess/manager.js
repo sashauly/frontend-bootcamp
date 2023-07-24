@@ -18,7 +18,7 @@ module.exports = class Manager extends Employee {
     this.projectQuantity = _projectQuantity;
   }
 
-  static checkMember(minQuantity) {
+  checkMember(minQuantity) {
     if (minQuantity) return true;
     return false;
   }
