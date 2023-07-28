@@ -33,7 +33,7 @@ In continuation of the last task, you need to create [5 new classes](./src/chapt
 
 Using:
 
-- Asynchrony и JS
+- Asynchronous
 - Event loop
 - Callback-hell
 - Promises
@@ -41,7 +41,7 @@ Using:
 - File system
 
 You need to read the data from the file1.txt file, after reading the data obtained, you need to write to the file2.txt file you need to implement this in 3 different ways, for each method its own function:
-`-` readAndWriteCallbackHell() - In this function, you should only use the transfer of colllbek to the Assinchronous function. \
+`-` readAndWriteCallbackHell() - In this function, you should only use the transfer of colllbek to the Asynchronous function. \
 `-` readAndWritePromises() - In this function, you should use proteins and then. \
 `-` readAndWriteAsyncAwait() - In this function, you can use async await.
 
