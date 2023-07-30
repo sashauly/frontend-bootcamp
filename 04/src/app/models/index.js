@@ -22,24 +22,19 @@ const sequelize = new Sequelize(DB, USER, PASSWORD, {
 });
 
 const db = {};
-
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.tutorials = (sequelize, Sequelize) => {
-  const Tutorial = sequelize.define('tutorial', {
-    title: {
-      type: Sequelize.STRING,
-    },
-    description: {
-      type: Sequelize.STRING,
-    },
-    published: {
-      type: Sequelize.BOOLEAN,
-    },
-  });
-
-  return Tutorial;
-};
+db.tutorials = db.sequelize.define('tutorial', {
+  title: {
+    type: db.Sequelize.STRING,
+  },
+  description: {
+    type: db.Sequelize.STRING,
+  },
+  published: {
+    type: db.Sequelize.BOOLEAN,
+  },
+});
 
 export default db;
