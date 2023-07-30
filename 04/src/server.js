@@ -1,7 +1,8 @@
-const express = require('express');
+import express, { json, urlencoded } from 'express';
 // const bodyParser = require('body-parser');
-const cors = require('cors');
-const db = require('./app/models');
+import cors from 'cors';
+import router from './app/routes/tutorial.routes.js';
+import db from './app/models/index.js';
 
 const app = express();
 
@@ -12,10 +13,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
-app.use(express.json());
+app.use(json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
-app.use(express.urlencoded({ extended: true }));
+app.use(urlencoded({ extended: true }));
 
 db.sequelize
   .sync()
@@ -31,7 +32,8 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to bezkoder application.' });
 });
 
-require('./app/routes/tutorial.routes')(app);
+app.use('/api/tutorials', router);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
