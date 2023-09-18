@@ -1,5 +1,4 @@
-//  В этой задаче нужно будет написать алгоритм поиска, который скажет,
-// можно ли найти входное слово в головоломке поиска слов, которая тоже подается функции на вход.
+//  В этой задаче нужно будет написать алгоритм поиска, который скажет, можно ли найти входное слово в головоломке поиска слов, которая тоже подается функции на вход.
 // Данная задача имеет два уровня сложности :
 // - Первый уровень включает в себя исключительно поиск по вертикали и по горизонтали
 // - Второй уровень дополнительно включает в себя поиск по диагонали
@@ -16,7 +15,6 @@ function searchSubString(puzzle, word) {
     const rowString = puzzle[row].join('').toUpperCase();
     const reversedRow = rowString.split('').reverse().join('');
     if (
-      // eslint-disable-next-line operator-linebreak
       rowString.includes(upperCaseWord) ||
       reversedRow.includes(upperCaseWord)
     ) {
@@ -61,3 +59,23 @@ function searchSubString(puzzle, word) {
 }
 
 module.exports = searchSubString;
+
+// const examplePuzzle = [
+//   ['b', 'l', 'g', 'o', 'l', 'd', 's'],
+//   ['x', 'k', 'q', 'w', 'i', 'j', 'p'],
+//   ['a', 'n', 'w', 'k', 'k', 'p', 'n'],
+//   ['h', 'e', 'e', 'e', 'k', 'i', 'l'],
+//   ['q', 'e', 'k', 'a', 'y', 'q', 'a'],
+//   ['h', 'u', 'h', 'a', 'e', 'a', 'u'],
+//   ['k', 'q', 'j', 'c', 'c', 'm', 'r'],
+// ];
+
+// // Level 1
+// console.log(searchSubString(examplePuzzle, 'like')); // true
+// console.log(searchSubString(examplePuzzle, 'gold')); // true
+// console.log(searchSubString(examplePuzzle, 'queen')); // true
+// console.log(searchSubString(examplePuzzle, 'dog')); // false
+
+// // Level 2
+// console.log(searchSubString(examplePuzzle, 'cake')); // true
+// console.log(searchSubString(examplePuzzle, 'mama')); // false
