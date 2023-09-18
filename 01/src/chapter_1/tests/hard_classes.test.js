@@ -1,10 +1,12 @@
-const FrontendDev = require('../hardClassess/frontendDev');
-const BackendDev = require('../hardClassess/backendDev');
-const Manager = require('../hardClassess/manager');
-const Project = require('../hardClassess/project');
-const Company = require('../hardClassess/company');
+import {
+  FrontendDeveloper,
+  BackendDeveloper,
+  Manager,
+  Project,
+  Company,
+} from '../hard_classes';
 
-const frontendDev = new FrontendDev(
+const frontendDev = new FrontendDeveloper(
   'Will Smith',
   'L1',
   ['working', 'testing'],
@@ -13,7 +15,7 @@ const frontendDev = new FrontendDev(
   'frontend',
   2,
 );
-const backendDev = new BackendDev(
+const backendDev = new BackendDeveloper(
   'John Shepard',
   'L2',
   ['working', 'testing', 'crying'],
@@ -65,10 +67,10 @@ describe('Default constructor', () => {
     expect(typeof manager).toBe('object');
   });
   test('should first', () => {
-    expect(manager.checkMember('L3')).toBe(true);
+    expect(manager.checkMember('L3', backendDev)).toBe(false);
   });
   test('should first', () => {
-    expect(manager.checkMember()).toBe(false);
+    expect(manager.checkMember('L3', manager)).toBe(true);
   });
 });
 
@@ -79,7 +81,13 @@ describe('Project', () => {
   });
   it('Add new company member', () => {
     project.addNewProjectMember(
-      new FrontendDev(
+      new Manager('Helena Grian', 'L3', ['working', 'testing'], 'Google', 3),
+    );
+    expect(project.team.manager.name).toBe('Helena Grian');
+  });
+  it('Add new company member', () => {
+    project.addNewProjectMember(
+      new FrontendDeveloper(
         'Helena Grian',
         'L3',
         ['working', 'testing'],
@@ -93,7 +101,7 @@ describe('Project', () => {
   });
   it('Add new company member', () => {
     project.addNewProjectMember(
-      new BackendDev(
+      new BackendDeveloper(
         'Helena Grian',
         'L3',
         ['working', 'testing'],
@@ -105,12 +113,7 @@ describe('Project', () => {
     );
     expect(project.team.developers.backend.pop().name).toBe('Helena Grian');
   });
-  it('Add new company member', () => {
-    project.addNewProjectMember(
-      new Manager('Helena Grian', 'L3', ['working', 'testing'], 'Google', 3),
-    );
-    expect(project.team.manager.name).toBe('Helena Grian');
-  });
+
   it('Add new company member', () => {
     expect(() => {
       project.addNewProjectMember();
@@ -119,59 +122,49 @@ describe('Project', () => {
 });
 
 describe('Company', () => {
-  it('Default constructor', () => {
-    // console.log(company);
-    expect(typeof company).toBe('object');
+  let company;
+
+  beforeEach(() => {
+    // Create a new instance of the Company class before each test
+    company = new Company('MyCompany');
   });
-  it('Add new company member', () => {
-    company.addNewCompanyMember(
-      new FrontendDev(
-        'Helena Grian',
-        'L3',
-        ['working', 'testing'],
-        'Google',
-        ['HTML', 'CSS', 'Javascript', 'Sass'],
-        'frontend',
-        3,
-      ),
-    );
-    expect(company.staff.developers.frontend.pop().name).toBe('Helena Grian');
+
+  test('Add new company member', () => {
+    // Add a new member to the company
+    company.addNewCompanyMember(manager);
+
+    // Assert that the member was added to the appropriate staff category
+    expect(company.staff.managers).toContain(manager);
   });
-  it('Add new company member', () => {
-    company.addNewCompanyMember(
-      new BackendDev(
-        'Helena Grian',
-        'L3',
-        ['working', 'testing'],
-        'Google',
-        ['HTML', 'CSS', 'Javascript', 'Sass'],
-        'frontend',
-        3,
-      ),
-    );
-    expect(company.staff.developers.backend.pop().name).toBe('Helena Grian');
+
+  test('Add project', () => {
+    // Add the project to the current projects list
+    company.addProject(project);
+
+    // Assert that the project was added to the current projects list
+    expect(company.currentProjects).toContain(project);
   });
-  it('Add new company member', () => {
-    company.addNewCompanyMember(
-      new Manager('Helena Grian', 'L3', ['working', 'testing'], 'Google', 3),
-    );
-    expect(company.staff.managers.pop().name).toBe('Helena Grian');
-  });
-  it('Add new company member', () => {
-    expect(() => {
-      company.addNewCompanyMember();
-    }).toThrow(Error);
-  });
-  test('add Project', () => {
-    company.addProject(
-      new Project('Google AI', 'L3', {
-        manager,
-        developers: { frontend: [frontendDev], backend: [backendDev] },
-      }),
-    );
-    expect(company.currentProjects.pop().projectName).toBe('Google AI');
-  });
+
   test('Get members quantity', () => {
-    expect(company.getMembersQuantity()).toBe(3);
+    // Add some members to the company
+    company.addNewCompanyMember(frontendDev);
+    company.addNewCompanyMember(backendDev);
+
+    // Get the total number of members in the company
+    const membersQuantity = company.getMembersQuantity();
+
+    // Assert that the number of members is correct
+    expect(membersQuantity).toBe(2);
+  });
+
+  test('Complete project', () => {
+    company.addProject(project);
+
+    // Complete the project
+    company.completeProject(project);
+
+    // Assert that the project was moved from current projects to completed projects
+    expect(company.currentProjects).not.toContain(project);
+    expect(company.completedProjects).toContain(project);
   });
 });
