@@ -1,4 +1,4 @@
-//Напишите функцию counter, которая при каждом вызове будет возвращать числа на 3 больше, чем в прошлый. Нельзя использовать переменные, объявленные через var!
+// Write the function of the Counter, which, for each call, will return the number 3 more than in the past.You can not use variables announced through VAR!
 
 function makeCounter() {
   let count = -3;
@@ -14,7 +14,7 @@ const counter = makeCounter();
 
 module.exports = counter;
 
-// counter(); // Функция вернет 0
-// counter(); // Функция вернет 3
-// counter(); // Функция вернет 6
-// counter(); // Функция вернет 9
+// counter(); // The function will return 0
+// counter(); // The function will return 3
+// counter(); // The function will return 6
+// counter(); // The function will return 9

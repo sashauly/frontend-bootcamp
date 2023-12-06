@@ -1,20 +1,25 @@
-# Lesson 1
+# Frontend bootcamp Day 00
 
 ## Table of Contents
 
-- [Lesson 1](#lesson-1)
+- [Frontend bootcamp Day 00](#frontend-bootcamp-day-00)
   - [Table of Contents](#table-of-contents)
-  - [Exercise 1. counter()](#exercise-1-counter)
-  - [Exercise 2. calculator()](#exercise-2-calculator)
-  - [Exercise 3. paskalsTriangle()](#exercise-3-paskalstriangle)
-  - [Exercise 4. fibonachi()](#exercise-4-fibonachi)
-  - [Exercise 5. removeReps()](#exercise-5-removereps)
-  - [Exercise 6. removeSymbol()](#exercise-6-removesymbol)
-  - [Exercise 7. atm()](#exercise-7-atm)
-  - [Exercise 8. wordSearch()](#exercise-8-wordsearch)
-  - [Exercise 9. sudoku()](#exercise-9-sudoku)
+  - [Tasks](#tasks)
+    - [Exercise 1. counter()](#exercise-1-counter)
+    - [Exercise 2. calculator()](#exercise-2-calculator)
+    - [Exercise 3. paskalsTriangle()](#exercise-3-paskalstriangle)
+    - [Exercise 4. fibonachi()](#exercise-4-fibonachi)
+    - [Exercise 5. removeReps()](#exercise-5-removereps)
+    - [Exercise 6. removeSymbol()](#exercise-6-removesymbol)
+    - [Exercise 7. atm()](#exercise-7-atm)
+    - [Exercise 8. wordSearch()](#exercise-8-wordsearch)
+    - [Exercise 9. sudoku()](#exercise-9-sudoku)
+  - [Project status](#project-status)
+  - [Contacts](#contacts)
 
-## Exercise 1. counter()
+## Tasks
+
+### Exercise 1. [counter()](./src/counter.js)
 
 Using:
 
@@ -35,9 +40,7 @@ counter(); // The function will return 9
 
 ```
 
-[Stubs for functions](./src/counter.js).
-
-## Exercise 2. calculator()
+### Exercise 2. [calculator()](./src/calculator.js)
 
 Using:
 
@@ -55,9 +58,7 @@ You also need to write 4 functions of basic arithmetic operators that take the f
 | five(mult(three()))            |   15   |
 | one(mult(three(plus(four())))) |   7    |
 
-[Stubs for functions](./src/calculator.js).
-
-## Exercise 3. paskalsTriangle()
+### Exercise 3. [paskalsTriangle()](./src/paskalsTriangle.js)
 
 Using:
 
@@ -74,9 +75,7 @@ Perhaps recursion will help here.
 | paskalsTriangle(4,5)  |     5      |
 | paskalsTriangle(1,1)  |     1      |
 
-You can find the blanks for functions by [link](./src/paskalsTriangle.js).
-
-## Exercise 4. fibonachi()
+### Exercise 4. [fibonachi()](./src/fibonachi.js)
 
 Write a function that accepts the number from a series of Fibonacci and returns its value \
 Suppose that a series of Fibonacci starts with 0 index \
@@ -89,9 +88,7 @@ Suppose that a number of Fibonacci is represented as 0,1,1,2,3,5,8,13 ......
 | fibo(8)      |     34     |
 | fibo(21)     |   17711    |
 
-You can find the blanks for functions by [link](./src/fibonachi.js).
-
-## Exercise 5. removeReps()
+### Exercise 5. [removeReps()](./src/removeReps.js)
 
 Using:
 
@@ -111,13 +108,11 @@ removeReps([1, 1, 2, 4, 5, 6, 6, 8, 9, 11]); // Conclusion [1,2,4,5,6,8,9,11]
 
 | Introduction                                |     Conclusion     |
 | ------------------------------------------- | :----------------: |
-| removeReps([1, 1, 2, 4, 5, 6, 6, 8, 9, 11]) | [1,2,4,5,6,8,9,11] |
-| removeReps([1,1,1,1])                       |        [1]         |
-| removeReps([1,2,3,4,5,6])                   |   [1,2,3,4,5,6]    |
+| ```removeReps([1, 1, 2, 4, 5, 6, 6, 8, 9, 11])``` | ```[1,2,4,5,6,8,9,11]``` |
+| ```removeReps([1,1,1,1])```                       |        ```[1]```         |
+| ```removeReps([1,2,3,4,5,6])```                   |   ```[1,2,3,4,5,6]```    |
 
-You can find the blanks for functions by [link](./src/removeReps.js).
-
-## Exercise 6. removeSymbol()
+### Exercise 6. [removeSymbol()](./src/removeSymbol.js)
 
 Using:
 
@@ -132,18 +127,16 @@ Be sure to use the methods and cycles that you have studied.
 | removeSymbol("Hello world!", "z")                   |       Hello world!        |
 | removeSymbol("А роза азора", "А")                   |        роза азора         |
 
-You can find the blanks for functions by [link](./src/removeSymbol.js)
-
-## Exercise 7. atm()
+### Exercise 7. [atm()](./src/atm.js)
 
 Write a function that describes the basic behavior of an ATM that accepts the number to the input and returns the object in format {nominal_kurura: quantity_Muur}.\
 Working conditions of the function:
 
-`-` If an ATM cannot give out this amount, then an error 'Incorrect Value' is displayed
+- If an ATM cannot give out this amount, then an error 'Incorrect Value' is displayed
 
-`-` bills should be in the optimal way (instead of 5 bills with a face value of 1000, one 5000 is issued)
+- bills should be in the optimal way (instead of 5 bills with a face value of 1000, one 5000 is issued)
 
-`-` At a time, the ATM can issue no more than 20 bills, if the bills are not enough for issuing, then the 'Limit Exseeded' error is displayed
+- At a time, the ATM can issue no more than 20 bills, if the bills are not enough for issuing, then the 'Limit Exseeded' error is displayed
 
 ```javascript
 function atm(sum) {
@@ -157,41 +150,37 @@ atm(100050); // limit exceeded
 
 | Introduction |                        Conclusion                         |
 | ------------ | :-------------------------------------------------------: |
-| atm(8350)    | {5000 : 1, 2000 : 1, 1000 : 1, 200 : 1, 100 : 1, 50 : 1 } |
-| atm(2570)    |                      Incorrect value                      |
-| atm(100050)  |                      limit exceeded                       |
+| ```atm(8350)```    | ```{5000 : 1, 2000 : 1, 1000 : 1, 200 : 1, 100 : 1, 50 : 1 }``` |
+| ```atm(2570)```    |                      ```Incorrect value```                      |
+| ```atm(100050)```  |                      ```limit exceeded```                       |
 
-You can find the blanks for functions by [link](./src/atm.js)
-
-## Exercise 8. wordSearch()
+### Exercise 8. [wordSearch()](./src/wordSearch.js)
 
 In this task, it will be necessary to write an algorithm for the search, which will say whether it is possible to find the input word in the puzzle of the search for words, which is also fed to the input.
 This task has two levels of complexity:
 
-`-` the first level includes exclusively a vertical search and horizontally/
+- the first level includes exclusively a vertical search and horizontally/
 
-`-` the second level additionally includes a diagonal search/
+- the second level additionally includes a diagonal search/
 
-`-` words can be recorded from left to right and vice versa
+- the words can be recorded from left to right and vice versa
 
-An example of a puzzle and the output result can be found by [link](./src/wordSearch.js)
-
-## Exercise 9. sudoku()
+### Exercise 9. [sudoku()](./src/sudoku.js)
 
 You need to write a function to solve Sudoku.The function accepts one argument - a line in which there are at the site of the missed numbers -.
 The function should return the line in which all values will be filled.
 
 We will play Sudoku in a real puzzle, paying attention to how we are approaching the solution of the task.
 
-`-what strategies do we accept and why?
+- what strategies do we accept and why?
 
-`-` How do we choose, where to start?
+- How do we choose, where to start?
 
-`-` How do we find out when you really should put the number in the cage?
+- How do we find out when you really should put the number in the cage?
 
-`-` What do we do when we do not finally know how to fill the rest of the cells?
+- What do we do when we do not finally know how to fill the rest of the cells?
 
-Be sure to implement the `Prettyboard` method, which takes a board written in a line and returns a formatted version more familiar to our visual perception.For example:
+Be sure to implement the ```prettyboard()``` method, which takes a board written in a line and returns a formatted version more familiar to our visual perception.For example:
 
 ```logs
 1 - 5 8 - 2 - - -
@@ -207,12 +196,20 @@ Be sure to implement the `Prettyboard` method, which takes a board written in a 
 
 | Introduction                                                                                |                                                                 Conclusion                                                                  |
 | ------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------: |
-| sudoku("53--7----6--195----98----6-8---6---34--8-3--17---2---6-6----28----419--5----8--79") | ![Screenshot 2022-04-18 at 20 36 18](https://user-images.githubusercontent.com/46561905/163840787-2a2248b5-2cb4-43e3-9837-cc9a4564db9b.png) |
+| ```sudoku("53--7----6--195----98----6-8---6---34--8-3--17---2---6-6----28----419--5----8--79")``` | ![Screenshot 2022-04-18 at 20 36 18](https://user-images.githubusercontent.com/46561905/163840787-2a2248b5-2cb4-43e3-9837-cc9a4564db9b.png) |
 
-[In the task file](./src/Sudoku.js) test data for your function is presented, they have 3rd levels:
+[In the task file](./src/sudoku.js) test data for your function is presented, they have 3rd levels:
 
-`-` five puzzles can be resolved using basic logic
+- five puzzles can be resolved using basic logic
 
-`-` five require a little more advanced logic
+- five require a little more advanced logic
 
-`-` five require your resolver ability to guess and cut it off if you come to a dead end
+- five require your resolver ability to guess and cut it off if you come to a dead end
+
+## Project status
+
+Project is: **completed**
+
+## Contacts
+
+Created by [@sashauly](https://t.me/sashauly) - feel free to contact me!
