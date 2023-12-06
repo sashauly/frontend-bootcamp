@@ -1,94 +1,70 @@
-# Lesson 7
+# Frontend boot camp Day07
 
-## Table of Contents
+## Contents
 
-- [Lesson 7](#lesson-7)
-  - [Table of Contents](#table-of-contents)
-  - [Chapter I](#chapter-i)
-    - [React](#react)
-    - [Virtual DOM](#virtual-dom)
-    - [Create react app](#create-react-app)
-  - [Chapter II](#chapter-ii)
-    - [Классовые и функциональные компоненты](#классовые-и-функциональные-компоненты)
-    - [Life циклы компонента](#life-циклы-компонента)
-    - [JSX](#jsx)
-    - [Props](#props)
-    - [React hooks](#react-hooks)
-    - [Синтетические события](#синтетические-события)
-    - [Рендеринг списков и условия](#рендеринг-списков-и-условия)
-  - [Exercise 1](#exercise-1)
-  - [Exercise 2](#exercise-2)
+- [Frontend boot camp Day07](#frontend-boot-camp-day07)
+  - [Contents](#contents)
+  - [Screenshot](#screenshot)
+  - [Description](#description)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Tasks](#tasks)
+    - [Exercise 1](#exercise-1)
+    - [Exercise 2](#exercise-2)
+    - [Exercise 3](#exercise-3)
+  - [Project status](#project-status)
+  - [Contacts](#contacts)
 
-## Chapter I
+## Screenshot
 
-В этой главне мы познакомимся с React. Узнаем немного подробностей о его происхождении и сценариях использования, настроим базовый набор инструментов на нашем локальном компьютере и в процессе узнаем немного о том, как React работает.
+![Alt text](./misc/images/image.png)
 
-### React
+## Description
 
-React - это библиотека JavaScript, которая используется для создания пользовательского интерфейса. Первый релиз библиотеки увидел свет в марте 2013 года. Текущей версий на данный момент является версия React v18.0.
+In this chapter, we will consider the concept of `memoization`, as well as get acquainted with the `Public API`. A good example of the Public API is [the service](https://pokepi.co) with which you can get data on any Pokemon.
 
-Основная цель React - минимизировать ошибки, возникающие при разработке пользовательских интерфейсов. Это достигается за счёт использования компонентов - автономных логических фрагментов кода, которые описывают часть пользовательского интерфейса. А уже эти компоненты объединяются для создания полноценного пользовательского интерфейса. React абстрагирует большую часть работы по визуализации, оставляя вам возможность сосредоточиться на дизайне.
+## Technologies
 
-### Virtual DOM
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [React](https://reactjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Pokemon API](https://pokeapi.co/api/v2/)
+- [Vite](https://vitejs.dev/)
 
-Для решения проблемы производительности React использует концепцию [виртуального DOM](./materials/VirtualDom.md).
+## Setup
 
-### Create react app
+- `npm i`
+- `npm run dev`
 
-[CRA](./materials/CRA.md) предназначен для быстрого создания шаблонных проектов React-приложений.
+## Tasks
 
-## Chapter II
+### Exercise 1
 
-### Классовые и функциональные компоненты
+You need to write a fullstack SPA application, but instead of your own backend you need to use [Public API](https://pokeapi.co/api/v2/).
 
-Раньше было всего два способа определения React-компонентов, первый — это React.createClass(), а второй — классы ES6.
-Дальнейшая эволюция привнесла функциональные компоненты. И хоть состояний они не имели, но отлично подходили для более простых компонентов.
-В итоге в версии 16.8 команда React ввела хуки, не только ставя функциональные компоненты вровень с классовыми, но также делая их более лёгкими в написании и даже потенциально превосходящими своих старших собратьев.
-Подробнее [тут](./materials/Class_func_components.md)
+The application will be a simple list of Pokemon with the ability to add and remove them from the list.At the very top of the page, a search line will be located where you can enter the Pokemon name, after which a request to the `Public API` will be sent.
 
-### Life циклы компонента
+If there is such a Pokemon, it is added to the beginning of the list, otherwise the message `Pokemon is not found`.
+The list is the transfer of all Pokemon (if you send the `GET` request to the address <https://pokeapi.co/api/v2/pokemon>, then, as an answer, you will receive a list of the first 20 Pokemon, which indicates the name and link by which you can get more detailed information).
 
-[Жизненный цикл компонента в React](./materials/Life_cycles.md) — одна из наиболее важных концепций, которую следует знать. Почему? Потому что понимание жизненного цикла позволит вам правильно обрабатывать события в вашем приложении и обеспечивать корректную передачу данных между компонентами. Компоненты в React рождаются, решают какую-то задачу и прекращают свое существование.
+When displaying each Pokemon, you need to send a `GET` request for more detailed information about it. In the component of Pokemon, you need to display a name, number and the names of all available forms, as well as a photo of Pokemon (`pokemonApiResponse.sprites.font_default`).
 
-### JSX
+Next to each element of the list, a cross is displayed to remove Pokemon from the list.
 
-[JSX](./materials/JSX.md) - это надстройка на JavaScript, которая позволяет использовать XML-подобный синтаксис в JavaScript.
+![Exercise_1_schema](https://user-images.githubusercontent.com/48245816/171485125-5a28d25a-5caf-4cc5-84c5-f90b4000b9f0.png)
 
-### Props
+### Exercise 2
 
-Можно передавать данные в компоненты с помощью так называемых [пропсов](./materials//Props.md).
+Now you need to optimize your application. Get rid of extra renders with hooks `useCallback` / `useMemo` and `React.memo()`.
 
-### React hooks
+### Exercise 3
 
-Что же такое хуки?
+You already know how you can stylize React components. In this task, we invite you a little fantasize and try to realize a dream design!
 
-Хуки — это функции, с помощью которых вы можете «подцепиться» к состоянию и методам жизненного цикла React из функциональных компонентов. Хуки не работают внутри классов — они дают вам возможность использовать React без классов.
+## Project status
 
-Первыe хуки, который мы изучим, это функции [useState и useEffect](./materials/React_hooks.md).
+Project is: **completed**
 
-### Синтетические события
+## Contacts
 
-[Обработка событий в React-элементах](./materials/Synthetic_events.md) очень похожа на обработку событий в DOM-элементах. Но есть несколько синтаксических отличий: \
-`-` События в React именуются в стиле camelCase вместо нижнего регистра. \
-`-` С JSX вы передаёте функцию как обработчик события вместо строки.
-
-### Рендеринг списков и условия
-
-React позволяет разделить логику на независимые компоненты. Эти компоненты можно показывать или прятать в зависимости от текущего состояния.
-Условный рендеринг в React работает так же, как условные выражения работают в JavaScript.
-
-Для того чтобы отрисовать массив элементов, можно использовать JavaScript-функцию map(). Однако для элементов внутри map есть 1 обязательное условие, описание которого вы найдете [тут](./materials/React_key.md).
-
-## Exercise 1
-
-Вам нужно написать небольшое SPA приложение без использования backend. После установки CRA и инициализации проекта с его помощью очистите все ‘лишнее’. Задача состоит в следующем - на главной странице расположенны 2 кнопки : \
- `-`  ‘Stopwatch’ при клике на даннную кнопку отображается одноименный компонент с секундомером. Он засекает и показывает кол-во времени в формате hh : mm : ss, которое отображается этот компонент. !Если компонент не отображаться, то setInterval (если вы решили делать с его помощью), должен очищаться из стека браузера. \
- `-`  ’StudentInfo’ при клике на кнопку также отображется одноименный компонент, в котором содержится информация о вас - ФИО, Возраст, Фото. Данный компонент отображается по дефолту при загрузке страницы.
-
-## Exercise 2
-
-  Теперь давайте немного улучшим наше приложение. Вам понадобиться написать новый компонент ’SomeList’. Добавьте в компонент Stopwatch 2 кнопки которые будут отображаться под ‘циферблатом': \
- `-` ‘Add’.  При клике на эту кнопку текущий результат времени будет добавляться в список значений компонента SomeList. \
- `-` ‘Reset’. При клике все значения в SomeList будет очищаться.
-
-Список значений в SomeList изначально пустой, пока юзер не добавит туда какой-то результат. При закрытии компонента секундомера список обнуляется.
+Created by [@sashauly](https://t.me/sashauly) - feel free to contact me!
