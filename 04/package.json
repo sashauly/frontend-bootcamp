@@ -1,13 +1,13 @@
 {
-  "name": "Front_bootcamp_day04-2",
+  "name": "Front_bootcamp_day04",
   "version": "1.0.0",
   "repository": "ssh://git@repos-ssh.21-school.ru:2289/students/Front_bootcamp_day04.ID_884680/stonehom_student.21_school.ru/Front_bootcamp_day04-2.git",
   "author": "sashauly <sashauly.code@ya.ru>",
   "license": "MIT",
-  "main": "src/chapter_2/app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/chapter_2/app.js",
-    "serve": "npx nodemon src/chapter_2/app.js",
+    "start": "node src/app.js",
+    "serve": "npx nodemon src/app.js",
     "dbr": "yarn sequelize db:drop && yarn sequelize db:create && yarn sequelize db:migrate && yarn sequelize db:seed:all"
   },
   "dependencies": {
