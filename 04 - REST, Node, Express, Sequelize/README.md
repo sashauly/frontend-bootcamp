@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 04
 
+Introduction to REST API, Node.js, Express and Sequelize.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 04](#frontend-bootcamp-day-04)

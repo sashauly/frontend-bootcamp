@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 05
 
+Introduction to HTML templates(Handlebars), sessions and cookies.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 05](#frontend-bootcamp-day-05)

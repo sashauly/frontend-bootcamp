@@ -1,5 +1,7 @@
 # Frontend boot camp Day07
 
+Introduction to React memoization, public API.
+
 ## Contents
 
 - [Frontend boot camp Day07](#frontend-boot-camp-day07)

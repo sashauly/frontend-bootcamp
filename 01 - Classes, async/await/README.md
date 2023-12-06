@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 01
 
+Introduction to JavaScript classes, async/await.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 01](#frontend-bootcamp-day-01)

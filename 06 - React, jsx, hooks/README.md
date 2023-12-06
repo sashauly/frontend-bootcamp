@@ -1,5 +1,7 @@
 # Day 06 - Frontend boot camp
 
+Introduction to React, JSX, Virtual DOM, React hooks.
+
 ## Contents
 
 - [Day 06 - Frontend boot camp](#day-06---frontend-boot-camp)

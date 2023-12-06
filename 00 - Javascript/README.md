@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 00
 
+Introduction to JavaScript.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 00](#frontend-bootcamp-day-00)

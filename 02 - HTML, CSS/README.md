@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 02
 
+Introduction to HTML, CSS.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 02](#frontend-bootcamp-day-02)

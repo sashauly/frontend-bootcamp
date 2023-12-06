@@ -1,5 +1,7 @@
 # Frontend bootcamp Day 03
 
+Introduction to CSS Grid, JS in HTML and Bootstrap.
+
 ## Table of Contents
 
 - [Frontend bootcamp Day 03](#frontend-bootcamp-day-03)
