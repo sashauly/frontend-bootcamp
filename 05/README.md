@@ -4,6 +4,7 @@
 
 - [Frontend bootcamp Day 05](#frontend-bootcamp-day-05)
   - [Table of Contents](#table-of-contents)
+  - [Screenshot](#screenshot)
   - [Description](#description)
   - [Technologies](#technologies)
   - [Setup](#setup)
@@ -18,6 +19,10 @@
       - [Authorization Page](#authorization-page)
   - [Project status](#project-status)
   - [Contacts](#contacts)
+
+## Screenshot
+
+![Alt text](./misc/images/image.png)
 
 ## Description
 
