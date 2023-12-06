@@ -1,29 +1,58 @@
-# Lesson 4
+# Frontend bootcamp Day 03
 
 ## Table of Contents
 
-- [Lesson 4](#lesson-4)
+- [Frontend bootcamp Day 03](#frontend-bootcamp-day-03)
   - [Table of Contents](#table-of-contents)
-  - [Exercise 1](#exercise-1)
-  - [Exercise 2](#exercise-2)
-  - [Exercise 3](#exercise-3)
+  - [Screenshots](#screenshots)
+  - [Tasks](#tasks)
+    - [Exercise 1. CSS Grid Layout index.html](#exercise-1-css-grid-layout-indexhtml)
+    - [Exercise 2. JS Calculator index.html](#exercise-2-js-calculator-indexhtml)
+    - [Exercise 3. CSS Framework Bootstrap index.html](#exercise-3-css-framework-bootstrap-indexhtml)
+  - [Project status](#project-status)
+  - [Contacts](#contacts)
 
-## Exercise 1
+## Screenshots
 
-On the last task, you flashed a calculator.Now rewrite it taking into account new knowledge using Grid.
+> ex1![screenshot1](misc/images/ex1.png)
+>
+> ex3![screenshot3](misc/images/ex3.png)![Alt text](misc/images/about.png)
 
-## Exercise 2
+## Tasks
 
-Great, you have a HTML form of your calculator!Now you need to implement the functionality of his work.Write a script that implements all the operations presented in the layout (addition/subtraction/multiplication/division/erase everything)
+### Exercise 1. CSS Grid Layout [index.html](./src/chapter_1/index.html)
 
-## Exercise 3
+You need to flash a calculator using the CSS Grid Layout module.You should get the following result:
+
+![calculator](./misc/images/calculator.png)
+
+### Exercise 2. JS Calculator [index.html](./src/chapter_2/ex2/index.html)
+
+Great, you have a HTML form of your calculator!Now you need to implement the functionality of his work.Write a script that implements all the operations presented in the layout:
+
+> - addition
+> - subtraction
+> - multiplication
+> - division
+> - erase everything
+
+### Exercise 3. CSS Framework Bootstrap [index.html](./src/chapter_2/ex3/index.html)
 
 You have studied the work with the CSS Framework Bootstrap.
 Now you need to improve your calculator page
-Add Header on a page where there will be 2 links: \
-`-` on the Calculator page, where your calculator will be.\
-`-` to the Student Info page.\
-On the Student Info page, your photo and information about you should be displayed: \
-`-` Name.\
-`-` training experience.\
-`-` Age.
+Add Header on a page where there will be 2 links:
+
+- on the Calculator page, where your calculator will be
+- to the Student Info page
+  On the Student Info page, your photo and information about you should be displayed:
+- Name
+- training experience
+- Age.
+
+## Project status
+
+Project is: **completed**
+
+## Contacts
+
+Created by [@sashauly](https://t.me/sashauly) - feel free to contact me!
