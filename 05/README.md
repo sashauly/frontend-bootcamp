@@ -1,103 +1,125 @@
-# Lesson 6
+# Frontend bootcamp Day 05
 
 ## Table of Contents
 
-- [Lesson 6](#lesson-6)
+- [Frontend bootcamp Day 05](#frontend-bootcamp-day-05)
   - [Table of Contents](#table-of-contents)
-  - [Chapter I](#chapter-i)
-    - [Шаблонизаторы](#шаблонизаторы)
-    - [HandleBars](#handlebars)
-  - [Exercise 1](#exercise-1)
-    - [Fetch API](#fetch-api)
-  - [Chapter II](#chapter-ii)
-    - [Cookie](#cookie)
-    - [Сессии](#сессии)
-  - [Exercise 2](#exercise-2)
+  - [Description](#description)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Tasks](#tasks)
+    - [Exercise 1](#exercise-1)
+      - [Main page](#main-page)
+      - [Orders page](#orders-page)
+      - [Single Order page](#single-order-page)
+      - [Menu page](#menu-page)
+    - [Exercise 2](#exercise-2)
+      - [Registration page](#registration-page)
+      - [Authorization Page](#authorization-page)
+  - [Project status](#project-status)
+  - [Contacts](#contacts)
 
-## Chapter I
+## Description
 
-Сегодня мы рассмотрим что такое шаблонизаторы для HTML и какие преимущества их использования. Научимся отправлять запросы на сервер с клиента. Узнаем о куках и как работать с сессиями в express.
+Today we will look at what the HTML `templateers` are and what are the advantages of their use. We will learn how to send requests for the server from the client. We learn about `Cookies` and how to work with `sessions` in `Express`.
 
-### Шаблонизаторы
+## Technologies
 
-Шаблонизатор — это инструмент, который позволяет проще писать разметку, делить её на компоненты и связывать с данными.
-Главное преимущество шаблонизаторов — они избавляют от необходимости писать повторяющийся код несколько раз.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Sequelize](https://sequelize.org/)
+- [Sequelize - CLI](https://sequelize.org/master/manual/cli.html)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [Handlebars](https://handlebarsjs.com/)
+- [express-session](https://www.npmjs.com/package/express-session)
 
-Для работы с движками представлений в Express определено ряд глобальных настроек, которые мы можем установить. Прежде всего это настройка view engine, которая устанавливает используемый движок предствлений, и views, которая устанавливает путь к папке с представлениями внутри проекта (если этот параметр не установлен, то по умолчанию используется папка с именем views).
+## Setup
 
-### HandleBars
+There are 2 parts in this project: first one in `chapter_1` with basic layout and second one in `chapter_2` with authorization and cookies.
 
-Для работы с представлениями установим пакет hbs в проект.
-Чтобы установить Handlebars в качестве движка представлений в Express, вызывается функция:
+- `npm i`
+- Setup your postgres config in [src/config/config.json](./src/config/config.json)
+- `npm run dbr`
 
-```javascript
-app.set('view engine', 'hbs')
-```
+> To run first one in `chapter_1`: `npm run start_v1`
+>
+> To run second one in `chapter_2`: `npm run start_v2`
 
-Пример простого рендера можете посмотреть в [этом файле](materials/simple_handlebars/app.js) .
+## Tasks
 
-Так же handlebars предоставляет различные конструкции, которые позволяют перебирать массив данных прямо в html шаблоне или реализовывать условный рендеринг. Подробнее об этих конструкция можно узнать [тут](https://handlebarsjs.com/guide/builtin-helpers.html).
+### Exercise 1
 
-И еще много чего интересно можете узнать на [официальном сайте handlebars](https://handlebarsjs.com/guide/)
+You already have a service for a restaurant, let's make UI an idea for it.
 
-## Exercise 1
+There should be `4` pages in the application:
 
-У вас уже готов сервис для ресторана, давайте сделаем UI представление для него.[В приложении должно быть 4 страницы](./src/chapter_1/Exercise_1.md)
+#### Main page
 
-### Fetch API
+(<http://localhost:3000/>)
 
-JavaScript может отправлять сетевые запросы на сервер и подгружать новую информацию по мере необходимости.
+![page layout](./misc/images/main_page.png)
 
-Например, мы можем использовать сетевой запрос, чтобы: \
-`-` Загрузить информацию о пользователе. \
-`-` Запросить последние обновления с сервера.
+The user sees an Input for entering an employee ID (waiter)
+After entering the page, a list of all orders with which this employee worked appears
 
-Для сетевых запросов из JavaScript есть широко известный термин «AJAX» (аббревиатура от Asynchronous JavaScript And XML). XML мы использовать не обязаны, просто термин старый, поэтому в нём есть это слово. Возможно, вы его уже где-то слышали.
+#### Orders page
 
-Есть несколько способов делать сетевые запросы и получать информацию с сервера.
-Одним из которых является метод **fetch**. Fetch API предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. Он также предоставляет глобальный метод fetch(), который позволяет легко и логично получать ресурсы по сети асинхронно.
+(<http://localhost:3000/orders>)
 
-[Базовый синтаксис](./materials/Fetch.md).
+![page layout](./misc/images/orders_page.png)
 
-## Chapter II
+The user sees a simple form that consistent of 2 selectors.In the first select, you need to choose a waiter, in the second to form an order from the presented dishes
+In case of successful sending data from the user's shape, it redirects to the order page, otherwise there is a message with the text of the error
 
-### Cookie
+#### Single Order page
 
-**Cookie** (web cookie, куки браузера) - это небольшой фрагмент данных, которые хранятся непосредственно в браузере. Браузер может сохранить этот фрагмент у себя и отправлять на сервер с каждым последующим запросом. Это, в частности, позволяет узнать, с одного ли браузера пришли несколько запросов (например, для аутентификации пользователя).
+(<http://localhost:3000/orders/id>)
 
-Куки часто используются для: \
-`-` Управления сеансом (логины, корзины для виртуальных покупок). \
-`-` Персонализации (пользовательские предпочтения). \
-`-` Трекинга (отслеживания поведения пользователей).
+![page layout](./misc/images/order_page.png)
 
-Резюмируем о cookie: \
-`-` Информация в виде ключ-значение, хранится в браузере. \
-`-` Привязана к домену. \
-`-` Бывают HTTP-only, недоступные для JS.
+On this page, the user sees all the information about the order (the order ID can be obtained from URI).In tabular form, dishes from the order (along with the pictures) are listed, at the bottom of the page the current order cost is indicated and the ‘close order’ button ‘
 
-Как установить cookie? Очень просто: \
-`-` Сервер – с помощью заголовка. \
-`-` Клиент – с помощью JS.
+#### Menu page
 
-Для работы с cookie на сервере мы будем использовать библиотеку cookie-parser.
+(<http://localhost:3000/menu>)
 
-### Сессии
+![page layout](./misc/images/menu_page.png)
 
-Веб-сайт основан на протоколе HTTP. HTTP - это протокол без состояния, что означает, что в конце каждого цикла запроса и ответа клиент и сервер забывают друг о друге.
+On the current page in tabular form, all dishes from the menu, with pictures, information from the description and the number of calories in the dish are listed
 
-Именно здесь на помощь приходит сессия. Сессия содержит уникальные данные о клиенте, позволяющие серверу отслеживать состояние пользователя. При аутентификации на основе сессии состояние пользователя хранится в памяти сервера или в базе данных.
+### Exercise 2
 
-Как работают сессии?
-Когда клиент делает запрос на вход на сервер, сервер создает сессию и хранит ее на стороне сервера. Когда сервер отвечает клиенту, он отправляет cookie. Этот файл cookie будет содержать уникальный идентификатор сессии, сохраненный на сервере, который теперь будет храниться на клиенте. Этот файл cookie будет отправляться при каждом запросе к серверу.
-Мы используем этот идентификатор сессии и ищем сессию, сохраненную в базе данных или в хранилище сессий, чтобы поддерживать соответствие один к одному между сессией и cookie. Это позволит сделать соединения по протоколу HTTP с сохранением состояния.
+You almost finished your application!The rest is to make it a little more believable. The `User` model in the database must be expanded and added with `username` and `password`.Add two more pages to your application.On these pages, the form of registration/authorization of the user will be displayed.The user can register as a waiter, or as admin. Different pages will be available on the type of user in the application.
 
-Для работы с сессиями на express на понадобятся следующие библиотеки: \
-`-` express-session \
-`-` session-file-store \
-`-` И все тот же cookie-parser
+#### Registration page
 
-Пример проекта с созданием сессии при логине вы можете найти в **этом** файле.
+(<http://localhost:3000/signup>)
 
-## Exercise 2
+![registration page](./misc/images/registration_page.png)
 
-Вы почти закончили ваше приложение! Остально сделать его чуть более правдоподобным. Модель user в БД необходимо расширить и добавить поля username и login. Добавьте еще две страницы в ваше приложение. На этих страницах будут отображаться форма регистрации/авторизации пользователя. Пользователь может зарегистрироваться как официант, или как admin. В зависимости от типа пользователя в приложении будут доступны разные страницы.[Роли пользователей](./src/chapter_2/Exercise_2.md)
+#### Authorization Page
+
+(<http://localhost:3000/signin>)
+
+![login page](./misc/images/login_page.png)
+
+> `Waiter`:
+>
+> - `/` - sees the current order, or a message with the call to go to work more actively.
+> - `/orders` - The waiter sees the form for creating a new order.The form consists of Invuting and a selective.Input is casualized and the name of the waiter is introduced in it.In the selector, you can choose dishes for order
+> - `/menu` - this page is available to all types of user
+
+> `Admin`:
+>
+> - `/` - on the main page, Admin sees cards of all current orders with information about the composition of the order and the waiter that serves it.
+> - `/orders` - Admin cannot create an order
+
+## Project status
+
+Project is: **completed**
+
+## Contacts
+
+Created by [@sashauly](https://t.me/sashauly) - feel free to contact me!
