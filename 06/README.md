@@ -4,6 +4,8 @@
 
 - [Day 06 - Frontend boot camp](#day-06---frontend-boot-camp)
   - [Contents](#contents)
+  - [Screenshots](#screenshots)
+  - [Description](#description)
   - [Technologies](#technologies)
   - [Setup](#setup)
   - [Tasks](#tasks)
@@ -12,7 +14,13 @@
   - [Project status](#project-status)
   - [Contacts](#contacts)
 
-In this chapter we will get acquainted with `React`. We learn a little details about its origin and use scenarios, configure the basic set of tools on our local computer and in the process we learn a little about how React works.
+## Screenshots
+
+![Alt text](./misc/images/image.png)
+
+## Description
+
+In this chapter we will get acquainted with `React`. We will learn a little details about its origin and use scenarios, configure the basic set of tools on our local computer and in the process we will learn a little about how React works.
 
 ## Technologies
 
@@ -32,7 +40,7 @@ In this chapter we will get acquainted with `React`. We learn a little details a
 
 ### Exercise 1
 
-You need to write a small SPA application without using Backend. After installing CRA and initializing the project, with it, clean all ‘extra’.
+You need to write a small `SPA` application without using Backend. After installing CRA(I'm using `Vite`) and initializing the project, with it, clean all ‘extra’.
 
 The task is as follows - on the main page there are 2 buttons:
 
